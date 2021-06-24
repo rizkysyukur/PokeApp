@@ -1,0 +1,56 @@
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+.column {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 24%;
+    padding: 0 4px;
+    text-align: center;
+}
+
+.app {
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 1345px) {
+    .column {
+        -ms-flex: 33%;
+        flex: 33%;
+        max-width: 32%;
+    }
+}
+
+@media screen and (max-width: 1015px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 48%;
+    }
+    .app {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .app {
+        width: 100%;
+    }
+}
