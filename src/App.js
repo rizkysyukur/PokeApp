@@ -1,16 +1,25 @@
 import './assets/css/styles.css';
-import Header from './components/header/Header';
-import Navbar from './components/navbar/Navbar';
-// import PokemonList from './pages/pokemon-list/PokemonList';
+import PokemonList from './pages/pokemon-list/PokemonList';
 import MyPokemon from './pages/my-pokemon/MyPokemon';
+import PokemonDetail from './pages/pokemon-detail/PokemonDetail';
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
     return (
         <div className="app">
-            <Header title="POKEMON LIST" />
-            <Navbar />
-            {/* <PokemonList /> */}
-            <MyPokemon />
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <PokemonList />
+                    </Route>
+                    <Route path="/my-pokemon">
+                        <MyPokemon />
+                    </Route>
+                    <Route path="/pokemon-detail">
+                        <PokemonDetail />
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }

@@ -1,10 +1,12 @@
 import { css } from "@emotion/css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	return (
 		<div className="row">
 			<div className="column">
-				<button className={css`
+				<Link to="/">
+					<button className={css`
                     background-color: #30A7D7;
                     width: 100%;
                     border-radius: 5px;
@@ -12,10 +14,13 @@ const Navbar = () => {
                     height: 30px;
                     margin: 5px 10px 10px 0;
                     border: none`}
-				>POKEMON LIST</button>
+					>POKEMON LIST</button>
+				</Link>
+
 			</div>
 			<div className="column">
-				<button className={css`
+				<Link to="/my-pokemon">
+					<button className={css`
                     background-color: #30A7D7;
                     width: 100%;
                     border-radius: 5px;
@@ -23,7 +28,8 @@ const Navbar = () => {
                     height: 30px;
                     margin: 5px 10px 10px 0px;
                     border: none`}
-				>MY POKEMON</button>
+					>MY POKEMON</button>
+				</Link>
 			</div>
 		</div>
 
